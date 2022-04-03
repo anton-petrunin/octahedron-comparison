@@ -34,11 +34,11 @@ pdfauthor={Nina Lebedeva and Anton Petrunin}}
 
 \date{}
 \maketitle
-\begin{abstract}
-We show that trees and their products meet octahedron comparison.
-\end{abstract}
+%\begin{abstract}
+%We show that trees and their products meet octahedron comparison.
+%\end{abstract}
 
-Let us recall the definition of \emph{graph comparison} given by Vladimir Zolotov and the authors \cite{lebedeva-petrunin-zolotov}.
+Let us recall the notion of \emph{graph comparison} introduced in \cite{lebedeva-petrunin-zolotov}.
 
 Let $\Gamma$ be a graph with vertices $v_1,\dots,v_n$.
 A metric space $X$ is said to meet the $\Gamma$-comparison if for any set of points in $X$ labeled by vertices of $\Gamma$ there is a model configuration $\tilde v_1,\dots,\tilde v_n$ in the Hilbert space $\HH$ such that 
@@ -71,7 +71,8 @@ Is it true that $O_3$-comparison holds in any complete length $\CAT(0)$ space?
 \end{thm}
 
 An answer to this question might lead to a classification of 6-point spaces that admit an isometric embedding complete length $\CAT(0)$ space.
-For 5-point spaces a classification was obtained by Tetsu Toyoda \cite{toyoda};
+The so-called \emph{(4+2)-point comparison} is a weaker version of $O_3$-comparison that holds in any complete length $\CAT(0)$ space \cite{AKP-Kirszbraun,alexander2019alexandrov}.
+For 5-point spaces a classification was given by Tetsu Toyoda \cite{toyoda};
 another proof was obtained by authors \cite{lebedeva-petrunin}.
 This and many related questions were raised by Michael Gromov \cite[1.19$_+(e)$]{gromov}.
 
@@ -87,19 +88,20 @@ Consider the union of intersections
 \[Y=([xx']\cap [yy'])\cup([yy']\cap [zz'])\cup([zz']\cap [xx']).\]
 The remaining proof of this part splits into two cases:
 \begin{enumerate}
-\item The set $Y$ is a \emph{tripod}; that is, $Y$ is a union of three geodesics meeting at one point. 
+\item The set $Y$ is a \emph{tripod}; that is, $Y$ is a union of three geodesics meeting at one point, say $o$.
 \item $Y$ lies in one of the  geodesics $[xx']$, $[yy']$, or $[zz']$; in this case, we may assume that $Y\subset [xx']$ without loss of generality.
 \end{enumerate}
 
 \parit{Case 1.}
 Suppose $Y$ is a tripod; denote its center by $o$.
 Without loss of generality, we may assume that geodesics $[xx']$, $[yy']$, and $[zz']$ have opposite orientation on the overlaps.
+
 Note that we can assume that in each pair $([ox],[oy'])$, $([oy],[oz'])$, and $([oz],[ox'])$ one of the geodesics lies in the other.
 Indeed, assume it is not true, say $[ox]\not\subset[oy']$ and $|o-x|_T\le |o-y'|_T$.
 Then moving $x$ to a point on $[oy']$ on the distance $|o-x|_T$ from $o$ will decrease the distance $|x-y'|_T$ and the rest of 14 distances between $x,y,z,x',y',z'$ will remain the same.
-Therefore if a model configuration exists for the new configuration, then the same holds for the old one. 
+Therefore so any model configuration for the new position of $x$ works for the old position.
 
-If $[ox]\subset [oy']$, then set $a=x$, otherwise $a=y'$.
+If $[ox]\subset [oy']$, then define $a=x$, otherwise $a=y'$.
 Similarly, chose  $b$ from $y$ or $z'$ and $c$ from $z$ or $x'$.
 Consider model triangle $[\tilde a\tilde b\tilde c]$ of $[abc]$.
 
@@ -138,7 +140,7 @@ It is straightforward to check that this configuration meets the conditions.
 \parit{Final step.}
 It remains to show that $O_3$-comparison holds for a product of trees $\Pi\z=T_1\times \dots\times T_n$.
 Any six-point configuration $x,y,z,x',y',z'\in \Pi$ can be described by $n$ six-point configurations $x_i$, $y_i$, $z_i$, $x'_i$, $y'_i$, $z'_i\in T_i$ for each $i$.
-Choose a model configuration $\tilde x_i,\tilde y_i,\tilde z_i,\tilde x'_i,\tilde y'_i,\tilde z'_i\in \HH$ for each $i$.
+Choose a model configuration $\tilde x_i$, $\tilde y_i$, $\tilde z_i$, $\tilde x'_i$, $\tilde y'_i$, $\tilde z'_i\in \HH$ for each $i$.
 Observe that the $n$-tuples $\tilde x=(\tilde x_1,\dots, \tilde x_n),\z\dots,\tilde z'=(\tilde z_1,\dots, \tilde z_n)$ in $\HH=\HH^{\times n}$ form a model configuration of $x,y,z,x',y',z'$.
 \qeds
 
