@@ -34,14 +34,15 @@ pdfauthor={Nina Lebedeva and Anton Petrunin}}
 
 \date{}
 \maketitle
-%\begin{abstract}
-%We show that trees and their products meet octahedron comparison.
-%\end{abstract}
+\begin{abstract}
+We show that trees and their products meet octahedron comparison.
+\end{abstract}
+
 
 Let us recall the notion of \emph{graph comparison} introduced in \cite{lebedeva-petrunin-zolotov}.
 
 Let $\Gamma$ be a graph with vertices $v_1,\dots,v_n$.
-A metric space $X$ is said to meet the $\Gamma$-comparison if for any set of points in $X$ labeled by vertices of $\Gamma$ there is a model configuration $\tilde v_1,\dots,\tilde v_n$ in the Hilbert space $\HH$ such that 
+A metric space $X$ meets the $\Gamma$-comparison if for any set of points in $X$ labeled by vertices of $\Gamma$ there is a model configuration $\tilde v_1,\dots,\tilde v_n$ in the Hilbert space $\HH$ such that 
 if $v_j$ is adjacent to $v_j$, then
 \[|\tilde v_i-\tilde v_j|_{\HH}\le | v_i-v_j|_{X}\]
 and
@@ -49,75 +50,82 @@ if $v_j$ is nonadjacent to $v_j$, then
 \[|\tilde v_i-\tilde v_j|_{\HH}\ge | v_i-v_j|_{X};\]
 here $|p-q|_M$ denotes the distance between points $p$ and $q$ in the metric space~$M$.
 
-\begin{wrapfigure}[9]{r}{35 mm}
+\begin{wrapfigure}{r}{35 mm}
 \vskip-2mm
 \centering
 \includegraphics{mppics/pic-30}
 \end{wrapfigure}
 
-Let us denote by $O_3$ is the graph of octahedron shown on the diagram.
-
-\begin{thm}{Theorem}
-The $O_3$-comparison holds for products of metric trees.
-\end{thm}
+Let us denote by $O_3$ the graph of the octahedron.
+For the labeling shown on the diagram, $O_3$-comparison means that any six-point configuration $x,x',y,y',z,z'\in X$ can be mapped to $\HH$ so that the 3 diagonals are not getting shorter
+and the $12$ edges are not getting longer.
 
 Note that the 4-cycle $C_4$ is an induced subgraph of $O_3$.
 It follows that $O_3$-comparison implies $C_4$-comparison;
 the latter is equivalent to $\CAT(0)$-comparison.
 The converse does not hold in general, but the following question remains open.
+It is the main motivation for the present note.
 
 \begin{thm}{Question}
 Is it true that $O_3$-comparison holds in any complete length $\CAT(0)$ space?
 \end{thm}
 
-An answer to this question might lead to a classification of 6-point spaces that admit an isometric embedding complete length $\CAT(0)$ space.
-The so-called \emph{(4+2)-point comparison} is a weaker version of $O_3$-comparison that holds in any complete length $\CAT(0)$ space \cite{AKP-Kirszbraun,alexander2019alexandrov}.
-For 5-point spaces a classification was given by Tetsu Toyoda \cite{toyoda};
-another proof was obtained by authors \cite{lebedeva-petrunin}.
-This and many related questions were raised by Michael Gromov \cite[1.19$_+(e)$]{gromov}.
+An affirmative answer should lead to a classification of 6-point spaces that admit an isometric embedding in a complete length $\CAT(0)$ space.
+On the other hand, an example would mean that $O_3$-comparison is something new,
+so both answers are interesting.
 
-\parit{Proof of the theorem.}
-First, let us show that $O_3$-comparison holds for any metric tree.
+The so-called \emph{(4+2)-point comparison} is a weaker version of $O_3$-comparison that holds in any complete length $\CAT(0)$ space \cite{AKP-Kirszbraun,alexander2019alexandrov}.
+A classification of 5-point spaces that admit distance preserving map into a complete length $\CAT(0)$ was given by Tetsu Toyoda \cite{toyoda};
+another proof was obtained by authors \cite{lebedeva-petrunin}.
+For all finite metric spaces, this and many related questions were raised by Michael Gromov \cite[1.19$_+(e)$]{gromov}.
+
+\begin{thm}{Theorem}
+The $O_3$-comparison holds in products of metric trees.
+\end{thm}
+
+\parit{Proof.}
+First, let us show that \textit{$O_3$-comparison holds for any metric tree $T$.}
 Consider a six-point configuration $x,y,z,x',y',z'$ in a tree labeled by the vertices of $O_3$ on the diagram.
 We can assume that the union of geodesics $[xx']$, $[yy']$, and $[zz']$ is connected.
 Indeed, suppose $[xx']$ does not intersect $[yy']$, and $[zz']$.
 Then we can shrink to a point a geodesic $\gamma$ that minimizes the distance from $[xx']$ to $[yy']\cup[zz']$;
-in the obtained tree $T'$ the distances $|x-x'|$, $|y-y'|$ and $|z-z'|$ remain the same and the remaining distances between $x,y,z,x',y',z'$ cannot get longer, so any model configuration for the six points in $T'$ works for the corresponding points in $T$.
+in the obtained tree $T'$ the distances $|x-x'|$, $|y-y'|$ and $|z-z'|$ remain the same and the remaining distances between $x,y,z,x',y',z'$ cannot get longer, so any model configuration for the six points in $T'$ works for the original configuration in $T$.
 
-Consider the union of intersections 
-\[Y=([xx']\cap [yy'])\cup([yy']\cap [zz'])\cup([zz']\cap [xx']).\]
-The remaining proof of this part splits into two cases:
+Set $Y=([xx']\cap [yy'])\cup([yy']\cap [zz'])\cup([zz']\cap [xx'])$.
+Note that we are in one of the following two cases:
 \begin{enumerate}
 \item The set $Y$ is a \emph{tripod}; that is, $Y$ is a union of three geodesics meeting at one point, say $o$.
-\item $Y$ lies in one of the  geodesics $[xx']$, $[yy']$, or $[zz']$; in this case, we may assume that $Y\subset [xx']$ without loss of generality.
+\item $Y$ lies in one of the  geodesics $[xx']$, $[yy']$, or $[zz']$;
+in this case, without loss of generality, we may assume that $Y\subset [xx']$ .
 \end{enumerate}
 
 \parit{Case 1.}
-Suppose $Y$ is a tripod; denote its center by $o$.
-Without loss of generality, we may assume that geodesics $[xx']$, $[yy']$, and $[zz']$ have opposite orientation on the overlaps.
+Without loss of generality, we may assume that geodesics $[xx']$, $[yy']$, and $[zz']$ have opposite orientations on the overlaps.
 
 Note that we can assume that in each pair $([ox],[oy'])$, $([oy],[oz'])$, and $([oz],[ox'])$ one of the geodesics lies in the other.
 Indeed, assume it is not true, say $[ox]\not\subset[oy']$ and $|o-x|_T\le |o-y'|_T$.
-Then moving $x$ to a point on $[oy']$ on the distance $|o-x|_T$ from $o$ will decrease the distance $|x-y'|_T$ and the rest of 14 distances between $x,y,z,x',y',z'$ will remain the same.
-Therefore so any model configuration for the new position of $x$ works for the old position.
+Then moving $x$ to a point on $[oy']$ on the distance $|o-x|_T$ from $o$ will decrease the distance $|x-y'|_T$ and the rest of 14 distances between $x,y,z,x',y',z'$ remain the same.
+Therefore any model configuration for the new position of $x$ works for the old position.
 
 If $[ox]\subset [oy']$, then define $a=x$, otherwise $a=y'$.
 Similarly, chose  $b$ from $y$ or $z'$ and $c$ from $z$ or $x'$.
 Consider model triangle $[\tilde a\tilde b\tilde c]$ of $[abc]$.
 
 Note that $[ab]\subset [yy']$, $[bc]\subset [zz']$, and $[ac]\subset [xx']$.
-Therefore we may choose points $\tilde x$, $\tilde x'$ on the lie $\tilde a\tilde c$ so that the map $x\mapsto \tilde x$, $x'\mapsto \tilde x'$, $a\mapsto \tilde a$, $c\mapsto \tilde c$ is distance-preserving.
+Therefore we may choose points $\tilde x$, $\tilde x'$ on the line $\tilde a\tilde c$ so that the map $x\mapsto \tilde x$, $x'\mapsto \tilde x'$, $a\mapsto \tilde a$, $c\mapsto \tilde c$ is distance-preserving.
 Similarly, we may choose $\tilde y$, $\tilde y'$ on the line $\tilde a\tilde b$ and $\tilde z$, $\tilde z'$ on the lie $\tilde b\tilde c$.
+A couple of possible configurations are shown on the diagram.
+
 \begin{figure}[ht!]
 \centering
 \includegraphics{mppics/pic-50}
 \end{figure}
-A couple of possible configurations are shown on the diagram.
+
 The triangle inequality implies that the obtained configuration meets the required conditions.
 
 \parit{Case 2.}
 Suppose $Y\subset [xx']$.
-Then $[yy']$ and $[zz']$ intersect $[xx']$ along two subsegments.
+Then $[yy']$ and $[zz']$ intersect $[xx']$ along two subsegments, possibly degenerate.
 Without loss of generality, we may assume that $|x-y'|_T\ge |x-y|_T$ and $|x-z'|_T\ge |x-z|_T$;
 in other words, geodesics $[xx']$, $[yy']$, and $[zz']$ oriented the same way on their overlaps.
 
@@ -135,7 +143,7 @@ In this case, the configuration $\tilde x,\tilde x',\tilde y,\tilde y',\tilde z,
 &
 \tilde z'&=|z'-x|.
 \end{align*}
-It is straightforward to check that this configuration meets the conditions. 
+Again, the triangle inequality implies that this configuration meets the conditions. 
 
 \parit{Final step.}
 It remains to show that $O_3$-comparison holds for a product of trees $\Pi\z=T_1\times \dots\times T_n$.
