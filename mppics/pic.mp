@@ -44,7 +44,7 @@ dOt z0,z1,z2,z3,z4,z5;
 
 
 
-label.top (btex $x'$ etex,  z3);
+label.top (btex $x'$ etex,  z3+(1,0));
 label.top (btex $x$ etex,  z0);
 label.lrt (btex $y$ etex,  z4);
 label.ulft (btex $y'$ etex,  z1);
@@ -137,6 +137,43 @@ label.urt (btex $\tilde z'$ etex,  z.c+z.shift);
 label.bot (btex $\tilde z$ etex,  z.a+z.shift);
 label.bot (btex $\tilde y'$ etex,  z.b+z.shift);
 label.bot (btex $\tilde x'$ etex,  z.xx+z.shift);
+endfig;
+
+beginfig(60) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.u=(1,.5)*u;
+z.d=z.u yscaled -1;
+
+z.x=(0,0)*u;
+z.xx=(5,0)*u;
+z.xy=(1,0)*u;
+z.y=z.xy-1.5*z.d;
+z.xxyy=(2,0)*u;
+z.yy=z.xxyy+2*z.u;
+z.xz=(3,0)*u;
+z.z=z.xz-1.5*z.u;
+z.xxzz=(4,0)*u;
+z.zz=z.xxzz+2*z.d;
+
+draw z.x--z.xx;
+draw z.y--z.xy;
+draw z.yy--z.xxyy;
+draw z.z--z.xz;
+draw z.zz--z.xxzz;
+%draw z.xy--z.xxyy pensemibold;
+%draw z.xz--z.xxzz pensemibold;
+
+dOt z.x,z.xx,z.y,z.yy,z.z,z.zz;
+
+label.lft (btex $x$ etex,  z.x);
+label.lft (btex $y$ etex,  z.y);
+label.lft (btex $z$ etex,  z.z);
+label.rt (btex $x'$ etex,  z.xx);
+label.rt (btex $y'$ etex,  z.yy);
+label.rt (btex $z'$ etex,  z.zz);
 endfig;
 
 end
