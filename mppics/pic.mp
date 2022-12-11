@@ -61,41 +61,34 @@ u:=1cm;
 k:=1.8;
 a:=1.3*u;
 
-z0=(0,1)*u;
-z1=k*z0 rotated 60;
-z2=z0 rotated 120;
-z3=k*z0 rotated 180;
-z4=z0 rotated -120;
-z5=k*z0 rotated -60;
+z.o=origin;
+z.zx=(1,0)*u;
+z.xy=z.zx rotated 120 scaled 1.2;
+z.yz=z.zx rotated -120 scaled 1.1;
+z.x=z.zx+z.zx rotated 60 scaled .5;
+z.xxz=z.zx+z.zx rotated 0 scaled .5;
+z.xzz=z.zx+z.zx rotated -60 scaled .5;
+z.zz=z.zx+z.zx rotated -60 scaled .9;
+z.y=z.xy+z.xy rotated 60 scaled .6;
+z.xx=z.xy+z.xy rotated -60 scaled .5;
+z.z=z.yz+z.yz rotated 60 scaled .4;
+z.yy=z.yz+z.yz rotated -60 scaled .5;
 
-z.shift=(-8,0)*u;
-
-z.s0=(a,a)+z.shift;
-z.s1=(a,-a)+z.shift;
-z.s2=(-a,-a)+z.shift;
-z.s3=(-a,a)+z.shift;
-
-draw z.s0--z.s1--z.s2--z.s3--cycle;
-
-draw z0..z1..z3..z4..cycle;
-draw z1..z2..z4..z5..cycle;
-draw z2..z3..z5..z0..cycle;
-%draw z0--z2--z4--cycle;
-%draw z0..z1..z3..z4..z5..z1..z2..z3..z5..z0..z1..z3..z4..z5..z1..z2..z3..z5..cycle;
-
-dOt z0,z1,z2,z3,z4,z5;
-dOt z.s0,z.s1,z.s2,z.s3;
+draw z.x--z.zx--z.o--z.xy--z.xx;
+draw z.y--z.xy--z.o--z.yz--z.yy;
+draw z.z--z.yz--z.o--z.zx--z.zz;
+drawarrow ddarc(z.x, z.xxz, z.xzz)(-15, -10);
 
 
-label.top (btex $x'$ etex,  z3);
-label.top (btex $x$ etex,  z0);
-label.lrt (btex $y$ etex,  z4);
-label.ulft (btex $y'$ etex,  z1);
-label.llft (btex $z$ etex,  z2);
-label.urt (btex $z'$ etex,  z5);
+dOt z.o,z.x, z.xx, z.y, z.yy, z.z, z.zz;
 
-label.bot (btex $C_4$ etex,  z3+z.shift+(0,-10));
-label.bot (btex $O_3$ etex,  z3+(0,-10));
+label.lrt (btex $o$ etex,  z.o+(-2,0));
+label.top (btex $x'$ etex,  z.xx+(1,0));
+label.top (btex $x$ etex,  z.x);
+label.lft (btex $y$ etex,  z.y);
+label.lft (btex $y'$ etex,  z.yy);
+label.bot (btex $z$ etex,  z.z);
+label.bot (btex $z'$ etex,  z.zz+(1,2));
 endfig;
 
 beginfig(50) 

@@ -1,8 +1,11 @@
 \documentclass{article}
 \usepackage{quad}
 
-\hypersetup{pdftitle={Trees meet octahedron comparison},
-pdfauthor={Nina Lebedeva and Anton Petrunin}}
+\def\thetitle{Trees meet octahedron comparison}
+\def\theauthors{Nina Lebedeva and Anton Petrunin}
+
+\hypersetup{pdftitle={\thetitle},
+pdfauthor={\theauthors}}
 
 \newcommand{\Addresses}{{\bigskip\footnotesize
 
@@ -29,8 +32,8 @@ pdfauthor={Nina Lebedeva and Anton Petrunin}}
 %\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
 
 
-\title{Trees meet octahedron comparison}
-\author{Nina Lebedeva and Anton Petrunin}
+\title{\thetitle}
+\author{\theauthors}
 
 \date{}
 \maketitle
@@ -40,18 +43,19 @@ We show that trees and their products meet octahedron comparison.
 
 
 Let us recall the notion of graph comparison introduced in \cite{lebedeva-petrunin-zolotov}.
-
 Suppose $\Gamma$ is a graph with vertices $v_1,\dots,v_n$.
+
 A metric space $X$ meets the \emph{$\Gamma$-comparison} if for any set of points in $X$ labeled by vertices of $\Gamma$ there is a model configuration $\tilde v_1,\dots,\tilde v_n$ in the Hilbert space $\HH$ such that 
 if $v_j$ is adjacent to $v_j$, then
-\[|\tilde v_i-\tilde v_j|_{\HH}\le | v_i-v_j|_{X}\]
-and
-if $v_j$ is nonadjacent to $v_j$, then
-\[|\tilde v_i-\tilde v_j|_{\HH}\ge | v_i-v_j|_{X};\]
+\begin{align*}
+|\tilde v_i-\tilde v_j|_{\HH}&\le | v_i-v_j|_{X},
+\intertext{otherwise}
+|\tilde v_i-\tilde v_j|_{\HH}&\ge | v_i-v_j|_{X};
+\end{align*}
 here $|p-q|_M$ denotes the distance between points $p$ and $q$ in the metric space~$M$.
 
 \begin{wrapfigure}{r}{35 mm}
-\vskip-2mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-30}
 \end{wrapfigure}
@@ -65,36 +69,39 @@ Therefore, \textit{$O_3$-comparison implies $C_4$-comparison};
 the latter is one of equivalent ways to describe the $\CAT(0)$-comparison.
 In general, $C_4$-comparison does not imply $O_3$-comparison,
 but the following question remains open.
-It is motivated by questions posed by Michael Gromov \cite[1.19$_+(e)$]{gromov}.
+It was motivated by \cite[1.19$_+(e)$]{gromov}.
 
 \begin{thm}{Question}
 Is it true that $O_3$-comparison holds in any complete length $\CAT(0)$ space?
 \end{thm}
 
-This question is the main motivation for the our note.
 An affirmative answer should lead to a classification of six-point spaces that admit an isometric embedding in a complete length $\CAT(0)$ space.
-On the other hand, an example would mean that $O_3$-comparison is something new,
-so both answers to the question are interesting.
+On the other hand, it follows from the next theorem,
+that a counterexample would mean that $O_3$-comparison is something new and interesting;
+so, both answers are good.
 
 \begin{thm}{Theorem}
 The $O_3$-comparison holds in products of metric trees.
 \end{thm}
 
-Let us list three most related results.
+Let us list the most related results.
 \begin{itemize}
-\item The so-called \emph{(4+2)-point comparison} is another 6-point comparison which is weaker than $O_3$-comparison.
-It holds in any complete length $\CAT(0)$ space;
-the later was proved by Stpephanie Alexander, Vitali Kapovitch and the second author \cite{AKP-Kirszbraun,alexander2019alexandrov}.
-\item \textit{If a 5-point space satisfies $C_4$-comparison, then it is to a subset in a complete length $\CAT(0)$ space}.
-This result was proved by Tetsu Toyoda \cite{toyoda};
-another proof was obtained by the authors \cite{lebedeva-petrunin}.
-\item \textit{$C_4$-comparison implies $C_n$-comparison for any $n$},
-here $C_n$ denotes the $n$-cycle and the intrinsic metric is not required.
-This is another result of Tetsu Toyoda \cite{toyoda2019}.
-\end{itemize}
-For more related questions, see \cite{petrunin-2017,lebedeva-petrunin,lebedeva-petrunin-zolotov,lebedeva,lebedeva-petrunin-CBB, noar} and the references therein.
+\item The so-called \emph{(4+2)-point comparison} is another six-point comparison;
+it holds in any complete length $\CAT(0)$ space \cite{AKP-Kirszbraun,alexander2019alexandrov}.
 
-\parit{Proof.}
+\item There are examples of six-point metric space that meets the (4+2)-point comparison, but does not admit a distance-preserving embedding into a complete length $\CAT(0)$
+(see the discussion right after 7.2 in the updated arXiv version of \cite{AKP-Kirszbraun}).
+The $O_3$-comparison might be a sufficient condition for existence of such embedding.
+
+\item \textit{If a five-point space satisfies $C_4$-comparison, then it is isometric to a subset in a complete length $\CAT(0)$ space} \cite{toyoda,lebedeva-petrunin}.
+
+\item \textit{$C_4$-comparison implies $C_n$-comparison for any $n$},
+here $C_n$ denotes the $n$-cycle and the intrinsic metric is not required \cite{toyoda2019}. 
+\end{itemize}
+For other related questions, see \cite{petrunin-2017,lebedeva-petrunin,lebedeva-petrunin-zolotov,lebedeva,lebedeva-petrunin-CBB,lebedeva-petrunin-graph-alexandrov, noar} and the references therein.
+
+\section*{Proof}
+
 First, let us show that \textit{$O_3$-comparison holds for any metric tree $T$.}
 
 Consider a six-point configuration $x,y,z,x',y',z'$ in a tree labeled by the vertices of $O_3$ on the diagram.
@@ -111,27 +118,33 @@ Note that we are in one of the following two cases:
 \item $Y$ lies in one of the  geodesics $[xx']$, $[yy']$, or $[zz']$.
 \end{enumerate}
 
-\parit{Case 1.}
-Without loss of generality, we may assume that geodesics $[xx']$, $[yy']$, and $[zz']$ have opposite orientations on the overlaps.
+\begin{wrapfigure}{r}{35 mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-40}
+\end{wrapfigure}
 
-Note that we can assume that in each pair $([ox],[oy'])$, $([oy],[oz'])$, and $([oz],[ox'])$ one of the geodesics lies in the other.
-Indeed, assume it is not true, say $[ox]\not\subset[oy']$ and $|o-x|_T\le |o-y'|_T$.
-Then moving $x$ to a point on $[oy']$ on the distance $|o-x|_T$ from $o$ will decrease the distance $|x-y'|_T$ and the remaining fourteen distances between $x,y,z,x',y',z'$ remain the same.
+\parit{Case 1.}
+Without loss of generality, we may assume that geodesics $[xx']$, $[yy']$, and $[zz']$ intersect as on the diagram (possibly with some degenerate edges).
+
+Note that we can assume that in each pair $([ox],[oz'])$, $([oy],[ox'])$, and $([oz],[oy'])$ one of the geodesics lies in the other.
+Indeed, assume it is not true, say $[ox]\not\subset[oz']$ and $|o-x|_T\le |o-z'|_T$.
+Then moving $x$ to a point on $[oz']$ on the distance $|o-x|_T$ from $o$ will decrease the distance $|x-z'|_T$ and the remaining fourteen distances between $x,y,z,x',y',z'$ remain the same.
 Therefore any model configuration for the new position of $x$ works for the old position.
 
 If $[ox]\subset [oy']$, then define $a=x$, otherwise $a=y'$.
 Similarly, chose  $b$ from $y$ or $z'$ and $c$ from $z$ or $x'$.
 Consider model triangle $[\tilde a\tilde b\tilde c]$ of $[abc]$.
 
-\begin{figure}[ht!]
-\centering
-\includegraphics{mppics/pic-50}
-\end{figure}
-
 Note that $[ab]\subset [yy']$, $[bc]\subset [zz']$, and $[ac]\subset [xx']$.
 Therefore we may choose points $\tilde x$, $\tilde x'$ on the line $\tilde a\tilde c$ so that the map $x\mapsto \tilde x$, $x'\mapsto \tilde x'$, $a\mapsto \tilde a$, $c\mapsto \tilde c$ is distance-preserving.
 Similarly, we may choose $\tilde y$, $\tilde y'$ on the line $\tilde a\tilde b$ and $\tilde z$, $\tilde z'$ on the line $\tilde b\tilde c$.
 A couple of possible configurations are shown on the diagram.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics{mppics/pic-50}
+\end{figure}
 
 The triangle inequality implies that the obtained configuration meets the required conditions.
 
