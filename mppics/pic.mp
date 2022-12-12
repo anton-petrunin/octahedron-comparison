@@ -85,16 +85,16 @@ dOt z.o,z.x, z.xx, z.y, z.yy, z.z, z.zz;
 label.lrt (btex $o$ etex,  z.o+(-2,0));
 label.top (btex $x'$ etex,  z.xx+(1,0));
 label.top (btex $x$ etex,  z.x);
-label.lft (btex $y$ etex,  z.y);
-label.lft (btex $y'$ etex,  z.yy);
-label.bot (btex $z$ etex,  z.z);
-label.bot (btex $z'$ etex,  z.zz+(1,2));
+label.lft (btex $z$ etex,  z.y);
+label.lft (btex $z'$ etex,  z.yy);
+label.bot (btex $y$ etex,  z.z);
+label.bot (btex $y'$ etex,  z.zz+(1,2));
 endfig;
 
 beginfig(50) 
 save u,p;
 path p[];
-u:=1cm;
+u:=1.2cm;
 
 z.a=(0,0)*u;
 z.b=(1,0)*u;
@@ -120,15 +120,15 @@ dOt z.a+z.shift,z.b+z.shift,z.c+z.shift,z.x+z.shift,z.y+z.shift,z.xx+z.shift;
 label.bot (btex $\tilde x$ etex,  z.x);
 label.urt (btex $\tilde y$ etex,  z.y);
 label.bot (btex $\tilde z$ etex,  z.z);
-label.bot (btex $\tilde x'$ etex,  z.a);
-label.bot (btex $\tilde y'$ etex,  z.b);
-label.urt (btex $\tilde z'$ etex,  z.c);
+label.ulft (btex $\tilde x'{=}\tilde c$ etex,  z.a+(2,1));
+label.bot (btex $\tilde a{=}\tilde y'$ etex,  z.b);
+label.rt (btex $\tilde b{=}\tilde z'$ etex,  z.c+(0,3));
 
 label.bot (btex $\tilde x$ etex,  z.x+z.shift);
 label.urt (btex $\tilde y$ etex,  z.y+z.shift);
-label.urt (btex $\tilde z'$ etex,  z.c+z.shift);
-label.bot (btex $\tilde z$ etex,  z.a+z.shift);
-label.bot (btex $\tilde y'$ etex,  z.b+z.shift);
+label.urt (btex $\tilde b{=}\tilde z'$ etex,  z.c+z.shift);
+label.ulft (btex $\tilde z{=}\tilde c$ etex,  z.a+z.shift+(2,1));
+label.bot (btex $\tilde a{=}\tilde y'$ etex,  z.b+z.shift);
 label.bot (btex $\tilde x'$ etex,  z.xx+z.shift);
 endfig;
 

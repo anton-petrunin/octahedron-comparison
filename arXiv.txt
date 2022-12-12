@@ -1,0 +1,8 @@
+O3.tex
+O3.bbl
+library.bib
+mppics/pic-30.eps
+mppics/pic-40.eps
+mppics/pic-50.eps
+mppics/pic-60.eps
+quad.sty
