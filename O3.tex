@@ -38,13 +38,14 @@ pdfauthor={\theauthors}}
 \date{}
 \maketitle
 \begin{abstract}
-We show that trees and their products meet the octahedron comparison.
+We show that metric trees and their products meet the octahedron comparison.
 \end{abstract}
 
 
+\parbf{Introduction.}
 Let us recall the notion of graph comparison introduced in \cite{lebedeva-petrunin-zolotov}.
-Suppose $\Gamma$ is a graph with vertices $v_1,\dots,v_n$.
 
+Suppose $\Gamma$ is a graph with vertices $v_1,\dots,v_n$.
 A metric space $X$ meets the \emph{$\Gamma$-comparison} if for any set of points in $X$ labeled by vertices of $\Gamma$ there is a model configuration $\tilde v_1,\dots,\tilde v_n$ in the Hilbert space $\HH$ such that 
 if $v_j$ is adjacent to $v_j$, then
 \begin{align*}
@@ -66,7 +67,7 @@ and the edges are not getting longer.
 
 Note that the 4-cycle $C_4$ is an induced subgraph of $O_3$.
 Therefore, \textit{$O_3$-comparison implies $C_4$-comparison};
-the latter is one of equivalent ways to describe the $\CAT(0)$-comparison.
+the latter is one of equivalent ways to describe the $\CAT(0)$-comparison \cite{alexander2019alexandrov}.
 In general, $C_4$-comparison does not imply $O_3$-comparison,
 but the following question remains open.
 It was motivated by \cite[1.19$_+(e)$]{gromov}.
@@ -76,8 +77,8 @@ Is it true that $O_3$-comparison holds in any complete length $\CAT(0)$ space?
 \end{thm}
 
 An affirmative answer should lead to a classification of six-point spaces that admit an isometric embedding in a complete length $\CAT(0)$ space.
-On the other hand, it follows from the next theorem,
-that a counterexample would mean that $O_3$-comparison is something new and interesting;
+On the other hand, as it follows from the next theorem,
+a counterexample would mean that $O_3$-comparison is something new and interesting;
 so, both answers are good.
 
 Recall that a geodesic space $T$ is called a \emph{metric tree} if any pair of points in $T$ are connected by a unique geodesic,
@@ -88,7 +89,7 @@ Since metric trees and their products are $\CAT(0)$, the following theorem gives
 The $O_3$-comparison holds in products of metric trees.
 \end{thm}
 
-Let us list the most related results.
+Let us list the most relevant results.
 \begin{itemize}
 \item The so-called \emph{(4+2)-point comparison} is another six-point comparison;
 it holds in any complete length $\CAT(0)$ space \cite{AKP-Kirszbraun,alexander2019alexandrov}.
@@ -99,8 +100,8 @@ The $O_3$-comparison might be a sufficient condition for existence of such embed
 
 \item \textit{If a five-point space satisfies $C_4$-comparison, then it is isometric to a subset in a complete length $\CAT(0)$ space} \cite{toyoda,lebedeva-petrunin}.
 
-\item \textit{$C_4$-comparison implies $C_n$-comparison for any $n$},
-here $C_n$ denotes the $n$-cycle and the intrinsic metric is not required \cite{toyoda2019}. 
+\item \textit{$C_4$-comparison implies $C_n$-comparison for any $n$} \cite{toyoda2019};
+here $C_n$ denotes the $n$-cycle and the intrinsic metric is not required. 
 \end{itemize}
 For other related questions, see \cite{petrunin-2017,lebedeva-petrunin,lebedeva-petrunin-zolotov,lebedeva,lebedeva-petrunin-CBB,lebedeva-petrunin-graph-alexandrov, noar} and the references therein.
 
@@ -134,12 +135,12 @@ Without loss of generality, we may assume that geodesics $[xx']$, $[yy']$, and $
 
 Note that we can assume that in each pair $([ox],[oy'])$, $([oy],[oz'])$, and $([oz],[ox'])$ one of the geodesics lies in the other.
 Indeed, assume it is not true, say $[ox]\not\subset[oy']$ and $|o-x|_T\le |o-y'|_T$.
-Then moving $x$ to a point on $[oy']$ on the distance $|o-x|_T$ from $o$ will decrease the distance $|x-y'|_T$ and the remaining fourteen distances between $x,y,z,x',y',z'$ remain the same.
+Then, by moving $x$ to a point on $[oy']$ on the distance $|o-x|_T$ from $o$, we decrease the distance $|x-y'|_T$, while the remaining fourteen distances between $x,y,z,x',y',z'$ do not change.
 Therefore any model configuration for the new position of $x$ works for the old position.
 
 If $[ox]\subset [oy']$, then define $a=x$, otherwise $a=y'$.
 Similarly, chose  $b$ from $y$ or $z'$ and $c$ from $z$ or $x'$.
-Consider model triangle $[\tilde a\tilde b\tilde c]$ of $[abc]$.
+Consider model plane triangle $[\tilde a\tilde b\tilde c]$ of $[abc]$.
 
 Note that $[ab]\subset [yy']$, $[bc]\subset [zz']$, and $[ac]\subset [xx']$.
 Therefore we may choose points $\tilde x$, $\tilde x'$ on the line $\tilde a\tilde c$ so that the map $x\mapsto \tilde x$, $x'\mapsto \tilde x'$, $a\mapsto \tilde a$, $c\mapsto \tilde c$ is distance-preserving.
