@@ -21,7 +21,7 @@ outputformat := "eps";
 beginfig(30) 
 save u,p,k,a;
 path p[];
-u:=.7cm;
+u:=.5cm;
 k:=1.8;
 a:=1.3*u;
 
@@ -47,11 +47,11 @@ dOt z0,z1,z2,z3,z4,z5;
 label.top (btex $x'$ etex,  z3+(1,0));
 label.top (btex $x$ etex,  z0);
 label.lrt (btex $y$ etex,  z4);
-label.ulft (btex $y'$ etex,  z1);
+label.ulft (btex $y'$ etex,  z1+(3,0));
 label.llft (btex $z$ etex,  z2);
 label.urt (btex $z'$ etex,  z5);
 
-label.bot (btex $O_3$ etex,  z3+(0,-10));
+label.bot (btex Graph $O_3$. etex,  z3+(0,-10));
 endfig;
 
 beginfig(40) 
